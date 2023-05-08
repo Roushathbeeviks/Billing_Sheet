@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.css";
+
+/* 
+*{
+    background-color: rgb(218, 218, 218);
+}
+ .ngx-datatable .datatable-row-center {
+    border-bottom: 1px solid #516269;
+    padding-bottom: 10px;
+}
+.ngx-datatable .datatable-body .datatable-body-row>div {
+    margin-top: 8px;
+}
+
+.ngx-datatable .datatable-footer .datatable-footer-inner {
+    height: 50px !important;
+}
+.datatable-header-cell
+{
+   display: flex !important;
+   align-items: center !important;
+}
+
+
+
+.ngx-datatable .datatable-body::-webkit-scrollbar
+{
+ width: 5px;
+ background-color: #F5F5F5;
+
+}
+
+
+.ngx-datatable:hover .datatable-body::-webkit-scrollbar-thumb
+{
+ display: block;
+} */

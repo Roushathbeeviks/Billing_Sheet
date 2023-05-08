@@ -1,0 +1,131 @@
+<div class="main">
+  <h3>BILLING SHEET</h3>
+  <div class="nav">
+    <div class="search">
+      <label for="">Search:</label>
+      <input
+        type="text"
+        class="search"
+        [(ngModel)]="search"
+        placeholder="Search by name "
+      />
+    </div>
+    <div class="download">
+      <i class="fa fa-download" aria-hidden="true" (click)="Export()"></i>
+    </div>
+  </div>
+  <div class="div2">
+    <div class="container">
+      <table #Excel data-paging="false">
+        <tr>
+          <th>
+            Name
+            <i
+              class="fa fa-angle-down"
+              (click)="SortBy('name')"
+              aria-hidden="true"
+            ></i>
+          </th>
+          <th>Day-1</th>
+          <th>Day-2</th>
+          <th>Day-3</th>
+          <th>Day-4</th>
+          <th>Day-5</th>
+          <th>Day-6</th>
+          <th>Day-7</th>
+          <th>Day-8</th>
+          <th>Day-9</th>
+          <th>Day-10</th>
+          <th>Day-11</th>
+          <th>Day-12</th>
+          <th>Day-13</th>
+          <th>Day-14</th>
+          <th>Day-15</th>
+          <th>Day-16</th>
+          <th>Day-17</th>
+          <th>Day-18</th>
+          <th>Day-19</th>
+          <th>Day-20</th>
+          <th>Day-21</th>
+          <th>Day-22</th>
+          <th>Day-23</th>
+          <th>Day-24</th>
+          <th>Day-25</th>
+          <th>Day-26</th>
+          <th>Day-27</th>
+          <th>Day-28</th>
+          <th>Day-29</th>
+          <th>Day-30</th>
+        </tr>
+        <tr
+          *ngFor="
+            let value of Data
+              | orderBy : order : reverse
+              | filter : search
+              | paginate : { itemsPerPage: 5, currentPage: p };
+            let i = index
+          "
+        >
+          <td>{{ value.name }}</td>
+          <td>{{ value.day1 }}</td>
+          <td>{{ value.day2 }}</td>
+          <td>{{ value.day3 }}</td>
+          <td>{{ value.day4 }}</td>
+          <td>{{ value.day5 }}</td>
+          <td>{{ value.day6 }}</td>
+          <td>{{ value.day7 }}</td>
+          <td>{{ value.day8 }}</td>
+          <td>{{ value.day9 }}</td>
+          <td>{{ value.day10 }}</td>
+          <td>{{ value.day11 }}</td>
+          <td>{{ value.day12 }}</td>
+          <td>{{ value.day13 }}</td>
+          <td>{{ value.day14 }}</td>
+          <td>{{ value.day15 }}</td>
+          <td>{{ value.day16 }}</td>
+          <td>{{ value.day17 }}</td>
+          <td>{{ value.day18 }}</td>
+          <td>{{ value.day19 }}</td>
+          <td>{{ value.day20 }}</td>
+          <td>{{ value.day21 }}</td>
+          <td>{{ value.day22 }}</td>
+          <td>{{ value.day23 }}</td>
+          <td>{{ value.day24 }}</td>
+          <td>{{ value.day25 }}</td>
+          <td>{{ value.day26 }}</td>
+          <td>{{ value.day27 }}</td>
+          <td>{{ value.day28 }}</td>
+          <td>{{ value.day29 }}</td>
+          <td>{{ value.day30 }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="paginator">
+    <pagination-controls
+      (pageChange)="p = $event"
+      previousLabel=""
+      nextLabel=""
+    ></pagination-controls>
+  </div>
+
+  <div class="container">
+    <div class="uploadDocument">
+      <input type="file" (change)="onFileChange($event)" multiple="false" />
+      <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+      <span>Please Choose file</span>
+      <table>
+        <tbody>
+          <tr>
+            <th *ngFor="let header of tableSubTitle">{{ header }}</th>
+          </tr>
+          <tr *ngFor="let data of tableRecords">
+            <td *ngFor="let header of tableTitle">
+              {{ data[header] }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

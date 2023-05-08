@@ -1,0 +1,74 @@
+.main {
+  margin-top: 30px;
+  font-family:'Times New Roman';
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+/* input[type="text"].search{
+    border: none;
+    border-bottom: 1px solid black;
+} */
+i {
+  font-size: 20px;
+}
+/* ::placeholder { 
+  color: rgb(15, 15, 15);
+  opacity: 1;
+} */
+table {
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+  /* font-family: arial, sans-serif; */
+  border-collapse: collapse;
+  /* width:50%; */
+}
+
+td,
+th {
+  border: 1px solid #d3d2d2;
+  text-align: left;
+  padding: 8px;
+  min-width: 100px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.paginator {
+  display: flex;
+  justify-content: center;
+}
+/* .scroll-container {
+  border: 2px solid silver;
+  display: flex;
+  align-items: center;
+} */
+
+.container {
+  overflow-x: scroll;
+  /* max-width: 1250px; */
+  overflow-y: hidden;
+  align-items: center;
+}
+.div2 {
+  display: flex;
+  justify-content: center;
+}
+
+.uploadDocument input {
+  opacity: 0;
+  position: absolute;
+  z-index: 3;
+  border: 1px solid #000;
+}
+
+.uploadDocument span {
+  margin-left: 5px;
+}
