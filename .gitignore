@@ -39,9 +39,9 @@ bower_components
 build/Release
 
 # Dependency directories
-Table/node_modules/
-Table/.angular
-Table/.vscode
+node_modules/
+.angular
+.vscode
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
